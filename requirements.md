@@ -14,15 +14,16 @@ TODO: Describe each use case (at least one per team member).
     Give each use case a unique ID, e.g. UC1, UC2, ...
     Summarise these using the use-case template below.
 
-| TODO: USE-CASE ID e.g. UC1, UC2, ... | TODO: USE-CASE NAME | 
+| TODO: USE-CASE ID | TODO: USE-CASE NAME | 
 | -------------------------------------- | ------------------- |
-| **Description** | TODO: Goal to be achieved by use case and sources for requirement |
-| **Actors** | TODO: List of actors involved in use case |
-| **Assumptions** | TODO: Pre/post-conditions if any</td></tr>
-| **Steps** | TODO: Interactions between actors and system necessary to achieve goal |
-| **Variations** | TODO: OPTIONAL - Any variations in the steps of a use case |
-| **Non-functional** | TODO: OPTIONAL - List of non-functional requirements that the use case must meet. |
-| **Issues** | TODO: OPTIONAL - List of issues that remain to be resolved |
+| **UC1** | View Accident Hotspots |
+| **Description** | Users can view a map displaying high-incident areas in Bristol, filtered by date and severity. |
+| **Actors** | Commuter, Business Owner |
+| **Assumptions** | The system has access to up-to-date data from Open Data Bristol.</td></tr>
+| **Steps** | 1. User accesses the website. <br>2. User selects a time range and severity filter. <br>3. System displays a heatmap of accident hotspots. |
+| **Variations** | User can filter by specific types of accidents (e.g., Loss of Control, Nose to Tail)
+| **Non-functional** | Must display data within 2 seconds of applying filters. |
+| **Issues** | None at the moment. |
 
 
 TODO: Your Use-Case diagram should include all use-cases.
