@@ -7,7 +7,10 @@ TODO: Write brief user stories to explain how various actors would interact with
     Express these in the form from agile development:- As a (role) I want (goal) so that (benefit).
 
 ### Actors
-TODO: List and describe the actors/users for this product.
+- **Commuters:** Regular users who want to find safer routes.
+- **Business Owners:** Companies operating in Bristol who want to reduce accidents related to their fleet.
+- **City Planners:** Officials or engineers looking for data to improve road safety.
+- **GPS Providers:** Companies integrating collision data into navigation systems.
 
 ### Use Cases
 TODO: Describe each use case (at least one per team member).
