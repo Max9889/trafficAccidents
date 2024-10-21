@@ -4,7 +4,7 @@
 
 ### Problem statement
 The problem to be addressed in within this project is to reduce the frequency and severity of road collisions.
-This will be acheived by using a data set from open data Bristol to map out recent car accidents. 
+This will be achieved by using a data set from open data Bristol to map out recent car accidents. 
 This should result in a map that shows the areas of Bristol where the most car collisions have happened in
 recent times which may lead to people taking different routes when travelling. This could lead to a reduced number of collisions on Bristol's roads.
 
@@ -18,7 +18,7 @@ recent times which may lead to people taking different routes when travelling. T
 There are current websites that do already map road accidents. One example of an existing website is CrashMap.co.uk.
 As CrashMap provides data for the entire UK, their premium pricing for full access is very steep coming in at £1175 
 per year for just one user. Where as companies only operating in Bristol would not be interested in road collisions 
-happening hundereds of miles away as it does not directly impact their business. These business located in Bristol
+happening hundreds of miles away as it does not directly impact their business. These business located in Bristol
 would be more inclined to pay a smaller fee for data that is more tailored for their needs
 
 ### Expected Risks
@@ -34,4 +34,4 @@ audience (Bristol residents and Bristol business owners) as they may already bei
 - Required Technology
 - Mobile and desktop responsiveness
 
-Context Diagram found in images/context.png
+Context Diagram found in [Image](images/context.png)
