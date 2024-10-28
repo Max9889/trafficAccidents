@@ -7,7 +7,7 @@ User stories for an oven:
  - As a home-cook, I want to be able to change the temperature on my oven so that I can cook different food.
  - As a home-cook, I want my oven to distribute heat well so that it cooks food evenly.
  - As a home-cook, I want my oven to have different settings so that I can cook food in different ways.
- - As a home-cook, I want my oven to be big enough so that it can accommodate large amounts of food
+ - As a chef, I want my oven to be big enough so that it can accommodate large amounts of food
  - As a home-cook, I want my oven to be energy efficient so that it lowers the running cost of the oven
 
 
