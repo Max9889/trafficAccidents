@@ -3,8 +3,13 @@
 ## User Needs
 
 ### User stories
-TODO: Write brief user stories to explain how various actors would interact with the system to accomplish a goal.
-    Express these in the form from agile development:- As a (role) I want (goal) so that (benefit).
+User stories for an oven:
+ - As a home-cook, I want to be able to change the temperature on my oven so that I can cook different food.
+ - As a home-cook, I want my oven to distribute heat well so that it cooks food evenly.
+ - As a home-cook, I want my oven to have different settings so that I can cook food in different ways.
+ - As a home-cook, I want my oven to be big enough so that it can accommodate large amounts of food
+ - As a home-cook, I want my oven to be energy efficient so that it lowers the running cost of the oven
+
 
 ### Actors
 - **Commuters:** Regular users who want to find safer routes.
