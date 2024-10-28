@@ -17,7 +17,7 @@ TODO: Describe each use case (at least one per team member).
     Give each use case a unique ID, e.g. UC1, UC2, ...
     Summarise these using the use-case template below.
 
-| TODO: USE-CASE ID | TODO: USE-CASE NAME | 
+| USE-CASE 1 | VIEW ACCIDENT HOTSPOTS | 
 | -------------------------------------- | ------------------- |
 | **UC1** | View Accident Hotspots |
 | **Description** | Users can view a map displaying high-incident areas in Bristol, filtered by date and severity. |
@@ -28,6 +28,16 @@ TODO: Describe each use case (at least one per team member).
 | **Non-functional** | Must display data within 2 seconds of applying filters. |
 | **Issues** | None at the moment. |
 
+| USE-CASE 2 | VIEW DETAILED CRASH REPORTS | 
+| -------------------------------------- | ------------------- |
+| **UC2** | View Detailed Crash Reports |
+| **Description** | Users can select an accident and see information regarding it (date, severity, casualties, etc..). |
+| **Actors** | Commuter, Business Owner |
+| **Assumptions** | The system has access to up-to-date data from Open Data Bristol.</td></tr>
+| **Steps** | 1. User accesses the website. <br>2. User selects an accident. <br>3. System displays information regarding the accident. |
+| **Variations** | The user will be able to select accidents of  different severity |
+| **Non-functional** | Must display data within 2 seconds of applying filters. |
+| **Issues** | None at the moment. |
 
 TODO: Your Use-Case diagram should include all use-cases.
 
