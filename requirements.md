@@ -26,7 +26,7 @@ TODO: Describe each use case (at least one per team member).
 | -------------------------------------- | ------------------- |
 | **UC1** | View Accident Hotspots |
 | **Description** | Users can view a map displaying high-incident areas in Bristol, filtered by date and severity. |
-| **Actors** | Commuter, Business Owner |
+| **Actors** | User |
 | **Assumptions** | The system has access to up-to-date data from Open Data Bristol.</td></tr>
 | **Steps** | 1. User accesses the website. <br>2. User selects a time range and severity filter. <br>3. System displays a heatmap of accident hotspots. |
 | **Variations** | User can filter by specific types of accidents (e.g., Loss of Control, Nose to Tail)
@@ -37,10 +37,21 @@ TODO: Describe each use case (at least one per team member).
 | -------------------------------------- | ------------------- |
 | **UC2** | View Detailed Crash Reports |
 | **Description** | Users can select an accident and see information regarding it (date, severity, casualties, etc..). |
-| **Actors** | Commuter, Business Owner |
+| **Actors** | User |
 | **Assumptions** | The system has access to up-to-date data from Open Data Bristol.</td></tr>
 | **Steps** | 1. User accesses the website. <br>2. User selects an accident. <br>3. System displays information regarding the accident. |
 | **Variations** | The user will be able to select accidents of  different severity |
+| **Non-functional** | Must display data within 2 seconds of applying filters. |
+| **Issues** | None at the moment. |
+
+| USE-CASE 3 | SORT CRASHES BY SEVERITY | 
+| -------------------------------------- | ------------------- |
+| **UC2** | SORT CRASHES BY SEVERITY |
+| **Description** | Users can sort what crashes appear depending on the severity of the crash |
+| **Actors** | User |
+| **Assumptions** | The system has access to up-to-date data from Open Data Bristol.</td></tr>
+| **Steps** | 1. User accesses the website. <br>2. User selects a level of severity. <br>3. System displays accidents of that severity. |
+| **Variations** | The user will be able to filter the data even further |
 | **Non-functional** | Must display data within 2 seconds of applying filters. |
 | **Issues** | None at the moment. |
 
