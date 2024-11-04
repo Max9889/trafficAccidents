@@ -17,7 +17,7 @@ There are current websites that do already map road accidents. One example of an
 As CrashMap provides data for the entire UK, their premium pricing for full access is very steep coming in at £1175 
 per year for just one user. Where as companies only operating in Bristol would not be interested in road collisions 
 happening hundreds of miles away as it does not directly impact their business. These business located in Bristol
-would be more inclined to use a free service that gives them the same result.
+would be more inclined to use a free service that gives them a similar result but for free.
 
 ### Expected Risks
 One risk would be to ensure that the data is updated and accurate as not having up to date data or accurate
