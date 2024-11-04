@@ -3,13 +3,13 @@
 ## User Needs
 
 ### User stories
-User stories for an oven:
- - As a home-cook, I want to be able to change the temperature on my oven so that I can cook different food.
- - As a home-cook, I want my oven to distribute heat well so that it cooks food evenly.
- - As a home-cook, I want my oven to have different settings so that I can cook food in different ways.
- - As a chef, I want my oven to be big enough so that it can accommodate large amounts of food
- - As a home-cook, I want my oven to be energy efficient so that it lowers the running cost of the oven
-
+User stories for a traffic accidents map:
+- As a new driver, I want to be able to see where the most accidents happen so i can avoid that area.
+- As a bus driver, I want to know what routes i should be the most cautios of when driving as to ensure the journey is as safe as possible.
+- As a delivery driver, the more crashes in an area most likely indicates to more traffic, so avoiding that area will allow me to make deliveries faster.
+- As a taxi/uber driver, knowing where the accident hotspots are will allow me to take me and my passengers the safest routes.
+- As a local business owner, I value knowing where the most traffic accidents happen because I
+  **NOT FINISHED**
 
 ### Actors
 - **Commuters:** Regular users who want to find safer routes.
@@ -30,8 +30,8 @@ TODO: Describe each use case (at least one per team member).
 | **Assumptions** | The system has access to up-to-date data from Open Data Bristol.</td></tr>
 | **Steps** | 1. User accesses the website. <br>2. User selects a time range and severity filter. <br>3. System displays a heatmap of accident hotspots. |
 | **Variations** | User can filter by specific types of accidents (e.g., Loss of Control, Nose to Tail)
-| **Non-functional** | Must display data within 2 seconds of applying filters. |
-| **Issues** | None at the moment. |
+| **Non-functional** | Navigating through the map should be a smooth user experience. |
+| **Issues** | Recent accidents might not appear on the map until the database is updated. |
 
 | USE-CASE 2 | VIEW DETAILED CRASH REPORTS | 
 | -------------------------------------- | ------------------- |
@@ -40,9 +40,9 @@ TODO: Describe each use case (at least one per team member).
 | **Actors** | User |
 | **Assumptions** | The system has access to up-to-date data from Open Data Bristol.</td></tr>
 | **Steps** | 1. User accesses the website. <br>2. User selects an accident. <br>3. System displays information regarding the accident. |
-| **Variations** | The user will be able to select accidents of  different severity |
-| **Non-functional** | Must display data within 2 seconds of applying filters. |
-| **Issues** | None at the moment. |
+| **Variations** | The user will be able to select accidents of different severity |
+| **Non-functional** | The data should be displayed quickly after applying filters. |
+| **Issues** | The detailed reports could be incorrect. |
 
 | USE-CASE 3 | SORT CRASHES BY SEVERITY | 
 | -------------------------------------- | ------------------- |
@@ -51,9 +51,9 @@ TODO: Describe each use case (at least one per team member).
 | **Actors** | User |
 | **Assumptions** | The system has access to up-to-date data from Open Data Bristol.</td></tr>
 | **Steps** | 1. User accesses the website. <br>2. User selects a level of severity. <br>3. System displays accidents of that severity. |
-| **Variations** | The user will be able to filter the data even further |
-| **Non-functional** | Must display data within 2 seconds of applying filters. |
-| **Issues** | None at the moment. |
+| **Variations** | The user will be able to filter the data even further  |
+| **Non-functional** | It should be clear what to the user what they are sorting the map by. |
+| **Issues** | If the user sets the filters too strict, it is possible that no accidents are displayed. |
 
 TODO: Your Use-Case diagram should include all use-cases.
 
