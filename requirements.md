@@ -56,13 +56,19 @@ Use Case Diagram: [Image](images/UseCase.png)
 ## Software Requirements Specification
 ### Functional requirements
 FR1 - The system must be able to show the users car accidents in a certain area. (UC1)
+
 FR2 - The system should be able to display the nearest accidents to the user (Geo-location is not supported by all browsers). (UC1)
+
 FR3 - The system must let users see more information surrounding the specific accident. (UC2)
+
 FR4 - The system won't be able to provide the user the nearest recorded accidents if their geo-location is not accessible. (UC1)
+
 FR5 - The system must provide accurate data regarding car accidents. (UC1/2/3)
 
 
 ### Non-Functional Requirements
 NFR1 - Reliability: system availability - The system should be highly available at all times to ensure users can access the information at all times. (UC1/2/3)
+
 NFR2 - Usability: user-friendly interface - The interface of the system should be intuitive and responsive. This could involve minimal amount of clicks to provide the user what they want, filters and map should be clearly labelled, and the app should work flawlessly on both desktop and mobile. (UC1/2/3)
+
 NFR3 - Maintainability: Modular Codebase and Clear Documentation - The system should have a modular code structure to allow developers to easily update and add features without interfering with other parts of the system. The documentaion should be thourough and easy to understand (UC1/2/3)
