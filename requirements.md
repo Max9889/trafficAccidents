@@ -51,7 +51,7 @@ User stories for a traffic accidents map:
 | **Non-functional** | It should be clear what to the user what they are sorting the map by. |
 | **Issues** | If the user sets the filters too strict, it is possible that no accidents are displayed. |
 
-Use Case Diagram: images/UseCase.png
+Use Case Diagram: [Image](images/UseCase.png)
 
 ## Software Requirements Specification
 ### Functional requirements
