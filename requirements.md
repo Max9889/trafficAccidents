@@ -8,19 +8,15 @@ User stories for a traffic accidents map:
 - As a bus driver, I want to know what routes i should be the most cautios of when driving as to ensure the journey is as safe as possible.
 - As a delivery driver, the more crashes in an area most likely indicates to more traffic, so avoiding that area will allow me to make deliveries faster.
 - As a taxi/uber driver, knowing where the accident hotspots are will allow me to take me and my passengers the safest routes.
-- As a local business owner, I value knowing where the most traffic accidents happen because I
-  **NOT FINISHED**
+- As a pedestrian, I want to see data about pedestrian-involved accidents in areas that i frequently walk so that i know the safest areas to walk
 
 ### Actors
-- **Commuters:** Regular users who want to find safer routes.
+- **Commuters & Pedestrians:** Regular users who want to find safer routes.
 - **Business Owners:** Companies operating in Bristol who want to reduce accidents related to their fleet.
 - **City Planners:** Officials or engineers looking for data to improve road safety.
 - **GPS Providers:** Companies integrating collision data into navigation systems.
 
 ### Use Cases
-TODO: Describe each use case (at least one per team member).
-    Give each use case a unique ID, e.g. UC1, UC2, ...
-    Summarise these using the use-case template below.
 
 | USE-CASE 1 | VIEW ACCIDENT HOTSPOTS | 
 | -------------------------------------- | ------------------- |
@@ -46,7 +42,7 @@ TODO: Describe each use case (at least one per team member).
 
 | USE-CASE 3 | SORT CRASHES BY SEVERITY | 
 | -------------------------------------- | ------------------- |
-| **UC2** | SORT CRASHES BY SEVERITY |
+| **UC3** | SORT CRASHES BY SEVERITY |
 | **Description** | Users can sort what crashes appear depending on the severity of the crash |
 | **Actors** | User |
 | **Assumptions** | The system has access to up-to-date data from Open Data Bristol.</td></tr>
@@ -55,20 +51,18 @@ TODO: Describe each use case (at least one per team member).
 | **Non-functional** | It should be clear what to the user what they are sorting the map by. |
 | **Issues** | If the user sets the filters too strict, it is possible that no accidents are displayed. |
 
-TODO: Your Use-Case diagram should include all use-cases.
-
-![Insert your Use-Case Diagram Here](images/use-case.png)
+Use Case Diagram: ()
 
 ## Software Requirements Specification
 ### Functional requirements
-TODO: create a list of functional requirements. 
-    e.g. "The system shall ..."
-    Give each functional requirement a unique ID. e.g. FR1, FR2, ...
-    Indicate which UC the requirement comes from.
+FR1 - The system must be able to show the users car accidents in a certain area. (UC1)
+FR2 - The system should be able to display the nearest accidents to the user (Geo-location is not supported by all browsers). (UC1)
+FR3 - The system must let users see more information surrounding the specific accident. (UC2)
+FR4 - The system won't be able to provide the user the nearest recorded accidents if their geo-location is not accessible. (UC1)
+FR5 - The system must provide accurate data regarding car accidents. (UC1/2/3)
 
 
 ### Non-Functional Requirements
-TODO: Consider one or more [quality attributes](https://en.wikipedia.org/wiki/ISO/IEC_9126) to suggest a small number of non-functional requirements.
-Give each non-functional requirement a unique ID. e.g. NFR1, NFR2, ...
-
-Indicate which UC the requirement comes from.
+NFR1 - Reliability: system availability - The system should be highly available at all times to ensure users can access the information at all times. (UC1/2/3)
+NFR2 - Usability: user-friendly interface - The interface of the system should be intuitive and responsive. This could involve minimal amount of clicks to provide the user what they want, filters and map should be clearly labelled, and the app should work flawlessly on both desktop and mobile. (UC1/2/3)
+NFR3 - Maintainability: Modular Codebase and Clear Documentation - The system should have a modular code structure to allow developers to easily update and add features without interfering with other parts of the system. The documentaion should be thourough and easy to understand (UC1/2/3)
