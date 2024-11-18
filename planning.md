@@ -31,4 +31,6 @@ audience (Bristol residents and Bristol business owners) as they may already bei
 - Required Technology
 - Mobile and desktop responsiveness
 
+  TODO: Scope of the System of Interest. Include a bullet list of things from your context diagram that are in scope.
+
 Context Diagram found in [Image](images/context.png)
