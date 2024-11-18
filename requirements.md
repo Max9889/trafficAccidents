@@ -27,7 +27,7 @@ User stories for a traffic accidents map:
 | **Steps** | 1. User accesses the website. <br>2. User selects a time range and severity filter. <br>3. System displays a heatmap of accident hotspots. |
 | **Variations** | User can filter by specific types of accidents (e.g., Loss of Control, Nose to Tail)
 | **Non-functional** | Navigating through the map should be a smooth user experience. |
-| **Issues** | Recent accidents might not appear on the map until the database is updated. |
+| **Issues** | Recent accidents might not appear on the map until the database is updated. | - Max
 
 | USE-CASE 2 | VIEW DETAILED CRASH REPORTS | 
 | -------------------------------------- | ------------------- |
@@ -38,7 +38,7 @@ User stories for a traffic accidents map:
 | **Steps** | 1. User accesses the website. <br>2. User selects an accident. <br>3. System displays information regarding the accident. |
 | **Variations** | The user will be able to select accidents of different severity |
 | **Non-functional** | The data should be displayed quickly after applying filters. |
-| **Issues** | The detailed reports could be incorrect. |
+| **Issues** | The detailed reports could be incorrect. | - Max
 
 | USE-CASE 3 | SORT CRASHES BY SEVERITY | 
 | -------------------------------------- | ------------------- |
@@ -49,7 +49,7 @@ User stories for a traffic accidents map:
 | **Steps** | 1. User accesses the website. <br>2. User selects a level of severity. <br>3. System displays accidents of that severity. |
 | **Variations** | The user will be able to filter the data even further  |
 | **Non-functional** | It should be clear what to the user what they are sorting the map by. |
-| **Issues** | If the user sets the filters too strict, it is possible that no accidents are displayed. |
+| **Issues** | If the user sets the filters too strict, it is possible that no accidents are displayed. | - Max
 
 Use Case Diagram: [Image](images/UseCase.png)
 
