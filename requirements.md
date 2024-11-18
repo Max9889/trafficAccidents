@@ -55,6 +55,7 @@ User stories for a traffic accidents map:
 - Max
 
 Use Case Diagram: [Image](images/UseCase.png)
+#TODO: Add how the system interacts with external entities
 
 ## Software Requirements Specification
 ### Functional requirements
