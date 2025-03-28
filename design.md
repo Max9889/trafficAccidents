@@ -11,6 +11,7 @@ Wireframe for the page displaying the table (table.html)
 Wireframe for the page displaying the map (map.html)
 ![](images/Wireframe3.png)
 
+Wireflows:
 
 
 High-fidelity Mockups:
