@@ -1,7 +1,10 @@
 # Design
 
-## User Interface design
-TODO: Specify and develop a user interface mockup using a wireframe.
+Wireframes:
+![Wireframe for the landing page (index.html)](images/wireframe1.png)
+![Wireframe for the page displaying the table (table.html)](images/wireframe2.png)
+![Wireframe for the page displaying the map (map.html)](images/wireframe3.png)
 
-![Insert your wireframe/wireflow here](images/wireframe.png)
-TODO: repeat as necessary
+
+
+High-fidelity Mockups:
