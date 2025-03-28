@@ -23,4 +23,4 @@ High-fidelity wireframe for the page displaying the table (table.html)
 ![](images/high-fidelity Wireframe1.png)
 
 High-fidelity wireframe for the page displaying the map (map.html)
-[![](images/high-fidelity Wireframe3.png)](https://github.com/Max9889/trafficAccidents/blob/main/images/high-fidelity%20Wireframe3.png?raw=true)
+![](images/high-fidelity Wireframe3.png)
