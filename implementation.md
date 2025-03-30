@@ -40,15 +40,10 @@ style.css is used in this project to improve the consistency and visual clarity 
 
 
 ## Software Architecture
-TODO: Describe the major components of your architecture. Are any particular architectural styles being used?
-
 ![Insert your component Diagram here](images/componentDiagram.png)
 
 ## Bristol Open Data API
-TODO: Document each query to Bristol Open Data
-
 ![UML Class diagrams representing JSON query results](images/class1.png)
-TODO: Repeat as necessary
 
 # User guide
 TODO: Explain how each use-case works by providing step-by-step screenshots for each use-case. This should be based on a tested scenario.
