@@ -9,14 +9,14 @@ The dataset used for this system is vast. It has a total number of entries amoun
 TODO: Provide an outline of the project folder structure and the role of each file within it.
 provide a table listing the number of jslint warnings/reports for each module.
 
-
+```
 └── 📁TrafficAccidents
     └── index.html
     └── map.html
     └── script.js
     └── style.css
     └── table.html
-
+```
 
 ## Software Architecture
 TODO: Describe the major components of your architecture. Are any particular architectural styles being used?
