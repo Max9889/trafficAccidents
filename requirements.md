@@ -54,8 +54,8 @@ User stories for a traffic accidents map:
 | **Issues** | If the user sets the filters too strict, it is possible that no accidents are displayed. | 
 - Max
 
-Use Case Diagram: [Image](images/UseCase.png)
-#TODO: Add how the system interacts with external entities
+Use Case Diagram: 
+[Image](images/UseCase.png)
 
 ## Software Requirements Specification
 ### Functional requirements
