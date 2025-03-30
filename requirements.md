@@ -21,11 +21,11 @@ User stories for a traffic accidents map:
 | USE-CASE 1 | VIEW ACCIDENT HOTSPOTS | 
 | -------------------------------------- | ------------------- |
 | **UC1** | View Accident Hotspots |
-| **Description** | Users can view a map displaying high-incident areas in Bristol, filtered by date and severity. |
+| **Description** | Users can view a map displaying high-incident areas in Bristol. |
 | **Actors** | User |
 | **Assumptions** | The system has access to up-to-date data from Open Data Bristol.</td></tr>
-| **Steps** | 1. User accesses the website. <br>2. User selects a time range and severity filter. <br>3. System displays a heatmap of accident hotspots. |
-| **Variations** | User can filter by specific types of accidents (e.g., Loss of Control, Nose to Tail)
+| **Steps** | 1. User accesses the website. <br>2. User selects to display the information via map. <br>3. System displays a map of accident hotspots. |
+| **Variations** | User can share their location |
 | **Non-functional** | Navigating through the map should be a smooth user experience. |
 | **Issues** | Recent accidents might not appear on the map until the database is updated. |
 - Max
