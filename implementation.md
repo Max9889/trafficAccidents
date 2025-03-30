@@ -46,4 +46,15 @@ style.css is used in this project to improve the consistency and visual clarity 
 ![UML Class diagrams representing JSON query results](images/classDiagram.png)
 
 # User guide
-TODO: Explain how each use-case works by providing step-by-step screenshots for each use-case. This should be based on a tested scenario.
+
+Use Case 1: View accident hot-spots
+
+The user accesses the website and selects the option th view the data via map
+![](images/UC1.1.png)
+
+The Map displays the collisions and the user can easily see which areas have the most collisions
+![](images/UC1.2.png)
+
+The user can then share their location with the application which is then plotted on the map
+![](images/UC1.3.png)
+
