@@ -67,3 +67,18 @@ The table containing the collision information is displayed to the user
 
 The user can then filter the table by severity
 ![](images/UC2.3.png)
+
+## Use Case 3: Filter by Severity
+The user Accesses the website and selects the option to view the data via table
+![](images/UC2.1.png)
+
+The user can then filter the table by severe collisions
+![](images/UC3.1.png)
+
+The user can then filter the table by Moderate collisions
+![](images/UC2.3.png)
+
+The user can then filter the table by Minor collisions
+![](images/UC3.2.png)
+
+
