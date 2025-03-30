@@ -43,7 +43,7 @@ style.css is used in this project to improve the consistency and visual clarity 
 ![Insert your component Diagram here](images/componentDiagram.png)
 
 ## Bristol Open Data API
-![UML Class diagrams representing JSON query results](images/class1.png)
+![UML Class diagrams representing JSON query results](images/classDiagram.png)
 
 # User guide
 TODO: Explain how each use-case works by providing step-by-step screenshots for each use-case. This should be based on a tested scenario.
