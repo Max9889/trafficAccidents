@@ -47,7 +47,7 @@ style.css is used in this project to improve the consistency and visual clarity 
 
 # User guide
 
-##Use Case 1: View accident hot-spots
+## Use Case 1: View accident hot-spots
 
 The user accesses the website and selects the option to view the data via map
 ![](images/UC1.1.png)
@@ -58,7 +58,7 @@ The Map displays the collisions and the user can easily see which areas have the
 The user can then share their location with the application which is then plotted on the map
 ![](images/UC1.3.png)
 
-##Use Case 2: View Detailed Crash Reports
+## Use Case 2: View Detailed Crash Reports
 The user Accesses the website and selects the option to view the data via table
 ![](images/UC2.1.png)
 
