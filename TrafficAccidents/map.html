@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bristol Traffic Accidents</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v3.1.2/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.1.2/mapbox-gl.js"></script>
+    <script src="script.js" defer></script>
+    <style>
+        #map { position: absolute; margin-top: 30px;  top: 50%;  left: 50%; transform: translate(-50%, -50%);  height: 60%; width: 60%; }
+    </style>
+    <script>
+    const MY_TOKEN = "pk.eyJ1IjoibW1heHg3MyIsImEiOiJjbThyY3Y2a2IwbjZnMmxzaDc1NWZyeDZyIn0.YHCtu5k5YG2A8DoI7477LA";
+
+    function addMarkers(json) {
+    let features = json.features; // get accident data from the response
+
+    //loops through each accident in the response (features.length)
+    for (let i = 0; i < features.length; i++) {
+        let a = features[i].attributes; //details
+        let g = features[i].geometry; // location - lon lat
+
+        //checks if the lon lat exists or not
+        if (g && g.x !== undefined && g.y !== undefined) {
+            // if so,  marker is created at that location
+            let marker = new mapboxgl.Marker()
+                .setLngLat([g.x, g.y])
+                .addTo(map);
+
+            // Create popup with detailed info attatched to that specific map marker
+            let popupText = `
+                <strong>Date:</strong> ${a.DATE_ ? new Date(a.DATE_).toLocaleDateString() : "Unknown"}<br>
+                <strong>Time:</strong> ${a.TIME || "N/A"}<br>
+                <strong>Severity:</strong> ${a.SEVERITY || "N/A"}<br>
+                <strong>Vehicles Involved:</strong> ${a.VEHICLES || 0}<br>
+                <strong>Casualties:</strong> ${a.CASUALTIES || 0}<br>
+                <strong>Pedestrians:</strong> ${a.PEDESTRIAN || 0}
+            `;
+
+            let popup = new mapboxgl.Popup({ offset: 25 }).setHTML(popupText);
+            marker.setPopup(popup);
+        }
+    }
+}
+
+      function query() {
+        let url = "https://maps2.bristol.gov.uk/server2/rest/services/ext/ll_transport/MapServer/41/query?where=1%3D1&outFields=DATE_,TIME,SEVERITY,VEHICLES,CASUALTIES,X,Y,RENDER&outSR=4326&f=json";
+        fetch(url, { method: 'GET', headers: { 'Accept': 'application/json' } }) //requests data
+          .then(response => response.json()) //response converted into JSON
+          .then(addMarkers);
+      }
+
+    </script>
+
+  </head>
+
+  <body>
+    <div class="grid-container">
+      <header>
+        <h1>Traffic Accident Reports</a></h1>
+      </header>
+
+      <main>
+        <section class="top-bar">
+          <div class="view-buttons">
+            <a href="table.html">
+              <button>View as Table</button>
+            </a>
+            <button>View as Map</button>
+            <button onclick="getUserLocation()">Use My Location</button>
+          </div>
+        </section>
+
+        <section>
+          <div id="map"></div>
+
+          <script>
+            // Default location (Bristol, UK)
+            const defaultLat = 51.4545;
+            const defaultLon = -2.5879;
+
+            // Get query string parameters lat, lon
+            var urlParams = new URLSearchParams(location.search);
+            var lat = urlParams.get('lat') ? parseFloat(urlParams.get('lat')) : defaultLat;
+            var lon = urlParams.get('lon') ? parseFloat(urlParams.get('lon')) : defaultLon;
+
+            mapboxgl.accessToken = MY_TOKEN;
+            var map = new mapboxgl.Map({
+              container: 'map',
+              style: "mapbox://styles/mapbox/streets-v11",
+              center: [lon, lat], // Start location
+              zoom: 12
+            });
+
+            query();
+          </script>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bristol Traffic Accidents</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+
+</head>
+
+<body>
+
+  <header>
+    <h1>Traffic Accident Reports</h1>
+  </header>
+
+  <main>
+
+    <!-- Top bar with view and buttons -->
+    <section class="top-bar">
+      <div class="view-buttons">
+          <button>View as Table</button>
+        <a href="map.html">
+          <button>View as Map</button>
+        </a>
+      </div>
+    </section>
+
+    <!-- Traffic Accidents Section -->
+    <section>
+      <h2>Traffic Accidents Table</h2>
+      
+      <!-- Sorting buttons -->
+      <div class="sort-buttons">
+        <h2 class="table-title">
+          Sort
+          <div class="tooltip-container">
+            <span class="info-icon">ℹ️</span>
+            <div class="tooltip-text">
+              Select a button to sort the data.
+              <br>
+              <br>
+              Data will be displayed from highest to lowest / recent to oldest
+              <br>
+              Clicking twice will reverse the data
+            </div>
+          </div>
+        </h2>
+        <button onclick="filterTable('date')">Date</button>
+        <button onclick="filterTable('severity')">Severity</button>
+        <button onclick="filterTable('casualties')">Casualties</button>
+      </div>
+
+      <!-- Filter buttons -->
+      <div class="sort-buttons">
+        <h2 class="table-title">
+          Filter
+          <div class="tooltip-container">
+            <span class="info-icon">ℹ️</span>
+            <div class="tooltip-text">
+              Select a severity level to filter the table.
+              <br>
+              <br>
+              Severe: Severity = 3
+              <br>
+              Moderate: Severity = 2
+              <br>
+              Minor: Severity = 1
+            </div>
+          </div>
+        </h2>
+        <button onclick="filterBySeverity('all')">All</button>
+        <button onclick="filterBySeverity(3)">Severe</button>
+        <button onclick="filterBySeverity(2)">Moderate</button>
+        <button onclick="filterBySeverity(1)">Minor</button>
+      </div>
+
+      <!-- Table displaying traffic accident data -->
+      <table id="accidentsTable">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Severity</th>
+            <th>Vehicles</th>
+            <th>Casualties</th>
+            <th>Pedestrians</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Data Appears here-->
+        </tbody>
+      </table>
+      <div id="pagination" class="pagination-controls"></div>
+    </section>
+  
+  </main>
+
+  <script>
+const apiUrl = "https://maps2.bristol.gov.uk/server2/rest/services/ext/ll_transport/MapServer/41/query?where=1%3D1&outFields=DATE_,TIME,SEVERITY,VEHICLES,CASUALTIES,PEDESTRIAN&outSR=4326&f=json";
+
+let accidentData = []; // Original data from API
+let filteredData = []; // Data after applying filters/sorts
+let currentPage = 1; 
+const rowsPerPage = 12;
+
+// Fetch and initialize table data
+async function fetchAccidentData() {
+  try {
+    const response = await fetch(apiUrl); // makes the HTTP request to the API
+    const data = await response.json(); //gets the response in JSON format
+
+    accidentData = data.features.map(feature => feature.attributes); //This array holds the data of each collision
+    filteredData = [...accidentData]; // A copy of accidentData is made so that it can be filtered and sorted without modifying the original data 
+
+    displayTable(filteredData);//Data is output to the table
+  } catch (error) {
+    console.error("Error fetching data:", error);
+  }
+}
+
+// Display table with the gathered data
+function displayTable(data) {
+  const tableBody = document.querySelector("#accidentsTable tbody"); //selects the body of the table
+  tableBody.innerHTML = "";//clears the existing body before adding new rows
+
+  const startIndex = (currentPage - 1) * rowsPerPage; // gets the starting location (if on page 4, starting index is 36)
+  const endIndex = startIndex + rowsPerPage; // gets the ending location (if on page 4, ending index is 48)
+  const paginatedData = data.slice(startIndex, endIndex); // this gets the required data only
+
+  //if no data is available the code below executes
+  if (paginatedData.length === 0) {
+    tableBody.innerHTML = "<tr><td colspan='6'>No data available</td></tr>";
+    return;
+  }
+
+  // will loop over each element in the array
+  paginatedData.forEach(attr => {
+    const row = document.createElement("tr"); // creates a row in the table for the below attributes to be plotted
+    
+    //the values stored in attr will be plotted in each row created
+    row.innerHTML = `
+      <td>${new Date(attr.DATE_).toLocaleDateString()}</td>
+      <td>${attr.TIME || "N/A"}</td>
+      <td>${attr.SEVERITY || "N/A"}</td>
+      <td>${attr.VEHICLES || 0}</td>
+      <td>${attr.CASUALTIES || 0}</td>
+      <td>${attr.PEDESTRIAN || 0}</td>
+    `;
+    tableBody.appendChild(row); //inserts the row into the table
+  });
+
+  renderPaginationControls(data.length); //shows the controls to go to the next table page as well as current page number
+}
+
+// Filter by severity
+function filterBySeverity(severity) {
+  currentPage = 1; // Reset to first page whe data is filtered
+  if (severity === "all") {
+    filteredData = [...accidentData]; // is reset to the original data
+  } else {
+    filteredData = accidentData.filter(accident => accident.SEVERITY === severity); // is set to show either severity level 1, 2, or 3
+  }
+  displayTable(filteredData);//displays the newly filtered data
+}
+
+// Sorting toggles
+let sortState = {
+  // to keep track of the current direction that the data is being displayed
+  // is it descending or ascending?
+  date: "desc",
+  severity: "desc",
+  casualties: "desc"
+};
+
+// Sorting functions
+function filterTable(sortBy) {
+  currentPage = 1;// Reset to first page whe data is sorted
+
+  if (sortBy === "all") {
+    filteredData = [...accidentData];
+
+  } else if (sortBy === "date") {
+    sortState.date = sortState.date === "desc" ? "asc" : "desc";//toggles sorting order
+    filteredData.sort((a, b) => {
+      const dateA = new Date(a.DATE_);
+      const dateB = new Date(b.DATE_);
+      //depending on the sort state, the dates are sorted from oldest to most recent or most recent to oldest
+      return sortState.date === "desc" ? dateB - dateA : dateA - dateB;
+    });
+  } else if (sortBy === "severity") {
+    sortState.severity = sortState.severity === "desc" ? "asc" : "desc";
+    filteredData.sort((a, b) => {
+      //depending on the sort state, the severity is sorted from highest to lowest or lowest to highest
+      return sortState.severity === "desc" ? b.SEVERITY - a.SEVERITY : a.SEVERITY - b.SEVERITY;
+    });
+  } else if (sortBy === "casualties") {
+    sortState.casualties = sortState.casualties === "desc" ? "asc" : "desc";
+    filteredData.sort((a, b) => {
+      // same as severity
+      return sortState.casualties === "desc" ? b.CASUALTIES - a.CASUALTIES : a.CASUALTIES - b.CASUALTIES;
+    });
+  }
+
+  displayTable(filteredData);
+}
+
+// This will allow the user to click through a set amount of entries 
+// per page without having to scroll the entire table
+function renderPaginationControls(totalRows) {
+  const paginationContainer = document.querySelector("#pagination");
+  if (!paginationContainer) return;
+
+  const totalPages = Math.ceil(totalRows / rowsPerPage);
+  //Displays the controls allowing the user to navigate the table
+  paginationContainer.innerHTML = `
+    <button onclick="changePage(-1)" ${currentPage === 1 ? "disabled" : ""}>Previous</button> 
+    <span> Page ${currentPage} of ${totalPages} </span>
+    <button onclick="changePage(1)" ${currentPage === totalPages ? "disabled" : ""}>Next</button>
+  `;
+  //user cannot go below page 1 or over the last page as the buttons will be disabld
+}
+
+//creates the controls to change the page of the table
+function changePage(direction) {
+  const totalPages = Math.ceil(filteredData.length / rowsPerPage);
+  currentPage += direction;
+
+  if (currentPage < 1) currentPage = 1;
+  if (currentPage > totalPages) currentPage = totalPages;
+
+  displayTable(filteredData); // This uses currently sorted/filtered data
+}
+
+// Starts on page load
+fetchAccidentData();
+
+  </script>
+  
+
+</body>
+</html>
