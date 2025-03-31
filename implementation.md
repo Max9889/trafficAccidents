@@ -12,6 +12,7 @@ The dataset used for this system is vast. It has a total number of entries amoun
     └── map.html
     └── script.js
     └── style.css
+    └── indexStyle.css
     └── table.html
 ```
 
