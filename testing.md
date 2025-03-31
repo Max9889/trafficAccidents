@@ -6,7 +6,7 @@ TODO: Describe any manual and automated (unit) tests. Uniquely identify each tes
 
 | Test Case ID | Test Type | Description | Scenario |
 |--------------|-----------|-------------|----------|
-| TF1.1 | UAT | The system must display car accidents on a map  | 1. The user clicks view as map 2. The collisions are displayed across Bristol  |
+| TF1.1 | UAT | The system must display car accidents on a map  | 1. The user clicks view as map \2. The collisions are displayed across Bristol  |
 
 Test Runs
 TODO: For each test described above, indicate the current status. 
