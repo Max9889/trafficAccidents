@@ -1,5 +1,5 @@
 # Design
-## Completed By Max
+## Completed By Max Mander
 
 Wireframes:
 
