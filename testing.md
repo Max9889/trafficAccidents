@@ -5,6 +5,7 @@
 TODO: Describe any manual and automated (unit) tests. Uniquely identify each test case. Include prerequisites and test data.
 
 | Test Case ID | Test Type | Description | Scenario |
+|--------------|-----------|-------------|----------|
 | TF1.1 | UAT | The system must display car accidents on a map  | 1.The user clicks view as map
 2. The collisions are displayed across Bristol  |
 
