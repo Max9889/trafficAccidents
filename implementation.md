@@ -27,6 +27,37 @@ The role of map.html in this project is to gather the data from open data Bristo
 
 jslint warnings for map.html:
 
+1. Undeclared 'navigator'.
+    if (navigator.geolocation) {//checks if geolocation is available
+4: 7
+2. Undeclared 'navigator'.
+      navigator.geolocation.getCurrentPosition(
+5: 20
+3. Use 'function (...)', not '(...) =>' when arrow functions become too complex.
+        (position) => {
+11: 11
+4. Undeclared 'map'.
+          map.flyTo({
+14: 13
+5. Expected property 'essential' to be ordered before property 'zoom'.
+            essential: true
+18: 15
+6. Undeclared 'mapboxgl'.
+          new mapboxgl.Marker({ color: "red" })
+20: 20
+7. Undeclared 'map'.
+            .addTo(map);
+22: 17
+8. Use 'function (...)', not '(...) =>' when arrow functions become too complex.
+        (error) => {
+24: 11
+9. Undeclared 'alert'.
+          alert("Error getting location: " + error.message);
+28: 7
+10. Undeclared 'alert'.
+      alert("Geolocation is not supported by this browser.");
+
+
 table.hmtl:
 The role of table.html in this project is to gather the data from open data Bristol and plot each entry on a table. It also allows the user to sort the table by the date, severity, and number of casualties. As well as being able to sort the table, the user can also filter the table depending on the severity of the collision (Servere, Moderate, and Minor).
 
