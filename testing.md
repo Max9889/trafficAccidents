@@ -20,8 +20,18 @@ Test Runs
 TODO: For each test described above, indicate the current status. 
 Create a requirements traceability matrix to validate the completeness of the product.
 
-| Use-Case ID | Requirement ID | Test Case | Status |
-|--------------|-----------|-------------|----------|
-|  |  |  |  |
+| Use-Case ID | Requirement ID | Software Module| Test Case | Status |
+|--------------|-----------|-------------|----------|----------|
+| UC1 | FR1 | map.html | TF1.1 | Pass |
+| UC1 | FR2 | map.html | TF1.2 | Pass |
+| UC1 | FR3 | map.html | TF1.3 | Pass |
+| UC2 | FR4 | map.html | TF2.1 | Pass |
+| UC3 | FR5 | table.html | TF3.1 | Pass |
+| UC1/2/3 | NFR1 | table.hmtl & map.html | TNF1.1 | Pass |
+| UC1/2/3 | NFR1 | ALL | TNF1.2 | Pass |
+| UC1/2/3 | NFR1 | ALL | TNF1.3 | Pass |
+| UC1/2/3 | NFR1 | ALL | TNF1.4 | Pass |
 
-TODO: Add rows for each test, current status is eg. pass/fail
+
+
+
