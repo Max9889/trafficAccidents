@@ -27,6 +27,17 @@ The role of map.html in this project is to gather the data from open data Bristo
 
 jslint warnings for map.html:
 
+
+table.hmtl:
+The role of table.html in this project is to gather the data from open data Bristol and plot each entry on a table. It also allows the user to sort the table by the date, severity, and number of casualties. As well as being able to sort the table, the user can also filter the table depending on the severity of the collision (Servere, Moderate, and Minor).
+
+jslint warnings for table.html:
+
+script.js:
+script.js is used in this project to run the function that gathers the location of the user so that it can be plotted on the map.
+
+jslint warnings for script.js:
+
 1. Undeclared 'navigator'.
     if (navigator.geolocation) {//checks if geolocation is available
 4: 7
@@ -56,17 +67,6 @@ jslint warnings for map.html:
 28: 7
 10. Undeclared 'alert'.
       alert("Geolocation is not supported by this browser.");
-
-
-table.hmtl:
-The role of table.html in this project is to gather the data from open data Bristol and plot each entry on a table. It also allows the user to sort the table by the date, severity, and number of casualties. As well as being able to sort the table, the user can also filter the table depending on the severity of the collision (Servere, Moderate, and Minor).
-
-jslint warnings for table.html:
-
-script.js:
-script.js is used in this project to run the function that gathers the location of the user so that it can be plotted on the map.
-
-jslint warnings for script.html:
 
 style.css:
 style.css is used in this project to improve the consistency and visual clarity of the web page as it sets the font used, colours used, and alignment of each element on the page.
