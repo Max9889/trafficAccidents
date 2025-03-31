@@ -19,8 +19,6 @@ The dataset used for this system is vast. It has a total number of entries amoun
 # index.hmtl:
 The role of index.html in this project is to provide the user with a simple introduction to the system. It has a small amount of text explaining what the application does. It also lets the user decide whether they want to view the data as a table or as a map.
 
-jslint warnings for index.html:
-
 
 # map.html:
 The role of map.html in this project is to gather the data from open data Bristol and plot each entry on a map. It also asks the user for their current location which is also then plotted on the map. Each marker plotted on the map can be clicked which provides the user with the information regarding each collision such as date, time, severity, vehicles, casualties, and pedestrians. 
