@@ -17,8 +17,6 @@
 
 
 Test Runs
-TODO: For each test described above, indicate the current status. 
-Create a requirements traceability matrix to validate the completeness of the product.
 
 | Use-Case ID | Requirement ID | Software Module| Test Case | Status |
 |--------------|-----------|-------------|----------|----------|
