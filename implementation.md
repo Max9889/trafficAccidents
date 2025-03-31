@@ -26,6 +26,56 @@ map.html:
 The role of map.html in this project is to gather the data from open data Bristol and plot each entry on a map. It also asks the user for their current location which is also then plotted on the map. Each marker plotted on the map can be clicked which provides the user with the information regarding each collision such as date, time, severity, vehicles, casualties, and pedestrians. 
 
 jslint warnings for map.html:
+1. [JSLint was unable to finish] Unexpected 'let'.
+    for (let i = 0; i < features.length; i++) {
+1: 1
+2. Line is longer than 80 characters.
+const MY_TOKEN = "pk.eyJ1IjoibW1heHg3MyIsImEiOiJjbThyY3Y2a2IwbjZnMmxzaDc1NWZyeDZyIn0.YHCtu5k5YG2A8DoI7477LA";
+7: 5
+3. Unexpected 'for'.
+    for (let i = 0; i < features.length; i++) {
+18: 1
+4. Line is longer than 80 characters.
+            // Create popup with detailed info attatched to that specific map marker
+20: 1
+5. Line is longer than 80 characters.
+                <strong>Date:</strong> ${a.DATE_ ? new Date(a.DATE_).toLocaleDateString() : "Unknown"}<br>
+32: 1
+6. Line is longer than 80 characters.
+        let url = "https://maps2.bristol.gov.uk/server2/rest/services/ext/ll_transport/MapServer/41/query?where=1%3D1&outFields=DATE_,TIME,SEVERITY,VEHICLES,CASUALTIES,X,Y,RENDER&outSR=4326&f=json";
+33: 1
+7. Line is longer than 80 characters.
+        fetch(url, { method: 'GET', headers: { 'Accept': 'application/json' } }) //requests data
+33: 30
+8. Use double quotes, not single quotes.
+        fetch(url, { method: 'GET', headers: { 'Accept': 'application/json' } }) //requests data
+33: 48
+9. Use double quotes, not single quotes.
+        fetch(url, { method: 'GET', headers: { 'Accept': 'application/json' } }) //requests data
+33: 58
+10. Use double quotes, not single quotes.
+        fetch(url, { method: 'GET', headers: { 'Accept': 'application/json' } }) //requests data
+43: 1
+11. Line is longer than 80 characters.
+            var lat = urlParams.get('lat') ? parseFloat(urlParams.get('lat')) : defaultLat;
+43: 37
+12. Use double quotes, not single quotes.
+            var lat = urlParams.get('lat') ? parseFloat(urlParams.get('lat')) : defaultLat;
+43: 71
+13. Use double quotes, not single quotes.
+            var lat = urlParams.get('lat') ? parseFloat(urlParams.get('lat')) : defaultLat;
+44: 1
+14. Line is longer than 80 characters.
+            var lon = urlParams.get('lon') ? parseFloat(urlParams.get('lon')) : defaultLon;
+44: 37
+15. Use double quotes, not single quotes.
+            var lon = urlParams.get('lon') ? parseFloat(urlParams.get('lon')) : defaultLon;
+44: 71
+16. Use double quotes, not single quotes.
+            var lon = urlParams.get('lon') ? parseFloat(urlParams.get('lon')) : defaultLon;
+48: 26
+17. Use double quotes, not single quotes.
+              container: 'map',
 
 
 table.hmtl:
