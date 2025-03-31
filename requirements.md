@@ -60,7 +60,7 @@ Use Case Diagram:
 
 ## Software Requirements Specification
 ### Functional requirements
-FR1 - The system must be able to show the users car accidents in a certain area. (UC1)
+FR1 - The system must be able to show the users car accidents via map. (UC1)
 
 FR2 - The system should be able to display the nearest accidents to the user (Geo-location is not supported by all browsers). (UC1)
 
